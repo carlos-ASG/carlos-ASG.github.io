@@ -1,0 +1,137 @@
+---
+---
+
+<section class="about section" id="sobre-mi">
+	<div class="container">
+		<h2>Tu socio tecnológico para convertir ideas en software funcional</h2>
+		<div class="about-content">
+			<div class="about-text">
+				<p class="lead">
+					Soy Carlos, Ingeniero de Software con pasión por resolver problemas complejos a través del código. Durante los últimos 3 años, he trabajado de forma independiente con clientes que necesitan más que solo programación: buscan un aliado estratégico que entienda su negocio y traduzca sus necesidades en soluciones digitales efectivas.
+				</p>
+				<p>
+					Mi enfoque va más allá del desarrollo técnico. Me involucro en comprender los objetivos de negocio de mis clientes para crear aplicaciones que no solo funcionan impecablemente, sino que generan valor real y resultados medibles.
+				</p>
+			</div>
+			<div class="about-features">
+				<div class="feature-card">
+					<div class="feature-icon">
+						<img src="https://api.iconify.design/mdi/rocket-launch.svg?color=%233b82f6" alt="Full-stack Development" />
+					</div>
+					<h3>Desarrollo full-stack completo</h3>
+					<p>Desde la interfaz de usuario hasta la infraestructura backend</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">
+						<img src="https://api.iconify.design/mdi/chat-processing.svg?color=%233b82f6" alt="Clear Communication" />
+					</div>
+					<h3>Comunicación clara</h3>
+					<p>Actualización constante durante todo el proyecto</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">
+						<img src="https://api.iconify.design/mdi/code-braces-box.svg?color=%233b82f6" alt="Clean Code" />
+					</div>
+					<h3>Código limpio y escalable</h3>
+					<p>Fácil de mantener y preparado para crecer</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">
+						<img src="https://api.iconify.design/mdi/shield-check.svg?color=%233b82f6" alt="Quality Commitment" />
+					</div>
+					<h3>Compromiso con la calidad</h3>
+					<p>Respeto por los plazos y estándares profesionales</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about {
+		background-color: white;
+	}
+
+	.about h2 {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto 3rem;
+	}
+
+	.about-content {
+		display: grid;
+		gap: 4rem;
+	}
+
+	.about-text {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.lead {
+		font-size: 1.15rem;
+		line-height: 1.8;
+		color: var(--color-text);
+		font-weight: 500;
+	}
+
+	.about-text p {
+		font-size: 1.05rem;
+		line-height: 1.8;
+	}
+
+	.about-features {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.feature-card {
+		padding: 2rem;
+		background: var(--color-bg-alt);
+		border-radius: 12px;
+		transition: all 0.3s ease;
+		border: 1px solid var(--color-border);
+	}
+
+	.feature-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+		border-color: var(--color-primary);
+	}
+
+	.feature-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+
+	.feature-icon img {
+		width: 56px;
+		height: 56px;
+		object-fit: contain;
+	}
+
+	.feature-card h3 {
+		font-size: 1.25rem;
+		margin-bottom: 0.5rem;
+		color: var(--color-text);
+	}
+
+	.feature-card p {
+		color: var(--color-text-light);
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.about-features {
+			grid-template-columns: 1fr;
+		}
+
+		.feature-card {
+			text-align: center;
+		}
+	}
+</style>

@@ -1,0 +1,249 @@
+---
+import avatarUrl from '../assets/IMG_3439.jpg?url';
+---
+
+<section class="hero section" id="inicio">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Ing. Carlos Alberto Sandoval Guardado</h1>
+                <img src={avatarUrl} alt="Carlos Alberto Sandoval Guardado" class="hero-avatar" />
+                <p class="subtitle">Ingeniero de Software Freelance especializado en crear soluciones digitales que transforman ideas en aplicaciones reales</p>
+                <p class="hero-description">
+                    Desarrollo sistemas completos desde cero: aplicaciones móviles, plataformas web y arquitecturas backend robustas. Con más de 3 años ayudando a empresas y emprendedores a digitalizar y escalar sus negocios.
+                </p>
+                <div class="hero-cta">
+                    <a href="#proyectos" class="btn btn-primary">Ver mis proyectos</a>
+                    <a href="#contacto" class="btn btn-secondary">Contáctame</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-card">
+                    <div class="code-header">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="code-body">
+                        <pre><code set:html={`<span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">"Carlos Sandoval"</span>,
+  <span class="property">skills</span>: [
+    <span class="string">"Flutter"</span>,
+    <span class="string">"Python"</span>,
+    <span class="string">"Vue.js"</span>,
+    <span class="string">"Firebase"</span>
+  ],
+  <span class="property">experience</span>: <span class="number">"3+"</span>,
+  <span class="property">available</span>: <span class="boolean">true</span>
+};`} />
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        padding-top: calc(var(--spacing-xl) + 60px);
+        background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        overflow-x: hidden; /* Previene desbordamiento horizontal */
+    }
+
+    .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        width: 100%; /* Asegura que no exceda el contenedor */
+    }
+
+    .hero-text {
+        max-width: 600px;
+        width: 100%; /* Asegura que se ajuste al contenedor en móvil */
+    }
+
+    .hero-avatar {
+        /* Make the avatar a rectangular banner matching the text width */
+        width: 100%;            /* same width as .hero-text / .hero-description */
+        max-width: 100%;        /* Previene desbordamiento */
+        height: 250px;          /* rectangular crop height */
+        object-fit: cover;     /* cover to crop without distortion */
+        border-radius: 0;      /* sharp corners (rectangle) */
+        display: block;
+        margin: 0 0 1rem 0;    /* sit above the text with spacing */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .subtitle {
+        font-size: 1.25rem;
+        color: var(--color-text);
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+        word-wrap: break-word; /* Asegura que el texto se ajuste */
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        line-height: 1.8;
+        word-wrap: break-word; /* Asegura que el texto se ajuste */
+    }
+
+    .hero-cta {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .hero-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Asegura que se ajuste al contenedor */
+    }
+
+    .code-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        max-width: 500px;
+        width: 100%; /* Asegura que se ajuste en móvil */
+        animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+
+    .code-header {
+        background: #f5f5f7;
+        padding: 0.75rem 1rem;
+        display: flex;
+        gap: 0.5rem;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+
+    .dot-red {
+        background-color: #ff5f56;
+    }
+
+    .dot-yellow {
+        background-color: #ffbd2e;
+    }
+
+    .dot-green {
+        background-color: #27c93f;
+    }
+
+    .code-body {
+        padding: 1.5rem;
+        background: #1e1e1e;
+        font-family: 'Fira Code', monospace;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        overflow-x: auto; /* Permite scroll horizontal si el código es muy largo */
+    }
+
+    .code-body pre {
+        margin: 0;
+        color: #d4d4d4;
+    }
+
+    .keyword {
+        color: #569cd6;
+    }
+
+    .variable {
+        color: #9cdcfe;
+    }
+
+    .property {
+        color: #9cdcfe;
+    }
+
+    .string {
+        color: #ce9178;
+    }
+
+    .number {
+        color: #b5cea8;
+    }
+
+    .boolean {
+        color: #569cd6;
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduce el tamaño de la letra */
+    }
+
+    @media (max-width: 968px) {
+        .hero-content {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .hero-avatar {
+            width: 100%;
+            height: 180px;
+        }
+
+        .hero-visual {
+            order: -1;
+        }
+
+        .code-card {
+            max-width: 100%;
+        }
+
+        .hero-text {
+            max-width: 100%; /* Permite que use todo el ancho disponible */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            padding-top: calc(var(--spacing-lg) + 60px);
+            min-height: auto;
+        }
+
+        .hero-cta {
+            flex-direction: column;
+        }
+
+        .hero-cta .btn {
+            width: 100%;
+        }
+
+        .code-body {
+            font-size: 0.75rem;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.1rem; /* Reduce tamaño en móvil */
+        }
+
+        .hero-description {
+            font-size: 1rem; /* Reduce tamaño en móvil */
+        }
+    }
+</style>

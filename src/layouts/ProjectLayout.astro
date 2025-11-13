@@ -1,0 +1,343 @@
+---
+import Layout from './Layout.astro';
+import ProjectNav from '../components/navbars/ProjectNav.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  date: Date;
+  tags?: string[];
+}
+
+const { title, description, image, date, tags } = Astro.props;
+
+// Formatear la fecha
+const formattedDate = new Intl.DateTimeFormat('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}).format(date);
+---
+
+<Layout title={`${title} | DevCarSan`}>
+  <ProjectNav />
+  <article class="project-detail">
+    <div class="project-content">
+      <div class="container">
+        <div class="content-wrapper">
+          <!-- Header dentro del contenedor -->
+          <header class="project-header">
+            <h1>{title}</h1>
+
+            <div class="project-meta">
+              <time datetime={date.toISOString()}>{formattedDate}</time>
+              {tags && tags.length > 0 && (
+                <div class="project-tags">
+                  {tags.map((tag: string) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <p class="lead">{description}</p>
+          </header>
+
+          <!-- Imagen hero dentro del contenedor -->
+          <div class="project-image-hero">
+            <img src={image} alt={title} />
+          </div>
+
+          <!-- Contenido del proyecto -->
+          <div class="project-body">
+            <slot />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="project-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h2>¿Interesado en trabajar juntos?</h2>
+            <p>Estoy disponible para proyectos freelance y oportunidades de colaboración.</p>
+          </div>
+          <div class="footer-contact">
+            <a href="mailto:devcarsan@gmail.com" class="btn btn-primary">
+              Contáctame
+            </a>
+            <div class="social-links">
+              <a href="https://github.com/devcarsan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                GitHub
+              </a>
+              <a href="https://linkedin.com/in/devcarsan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </article>
+</Layout>
+
+<style>
+  .project-detail {
+    padding-top: 6rem;
+    background: #f5f5f5;
+    min-height: 100vh;
+  }
+
+  .project-header {
+    padding: 2rem 0 3rem;
+  }
+
+  .project-header h1 {
+    font-size: 3rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .project-meta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .project-meta time {
+    color: var(--color-text-light);
+    font-size: 1rem;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: white;
+    color: var(--color-primary);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+    max-width: 800px;
+  }
+
+  .project-image-hero {
+    margin-bottom: 2rem;
+  }
+
+  .project-image-hero img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .project-content {
+    padding: 4rem 0;
+  }
+
+  .content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .content-wrapper :global(h2) {
+    font-size: 2rem;
+    color: var(--color-text);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-wrapper :global(h3) {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-wrapper :global(h4) {
+    font-size: 1.25rem;
+    color: var(--color-text);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .content-wrapper :global(p) {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .content-wrapper :global(ul),
+  .content-wrapper :global(ol) {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .content-wrapper :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .content-wrapper :global(strong) {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .content-wrapper :global(code) {
+    background: var(--color-bg-alt);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: 'Courier New', monospace;
+  }
+
+  .content-wrapper :global(pre) {
+    background: var(--color-bg-alt);
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .content-wrapper :global(pre code) {
+    background: none;
+    padding: 0;
+  }
+
+  .project-footer {
+    background: var(--color-bg-alt);
+    padding: 4rem 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .footer-info h2 {
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  .footer-info p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .social-links a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: var(--color-secondary);
+  }
+
+  @media (max-width: 768px) {
+    .project-detail {
+      padding-top: 4rem;
+    }
+
+    .project-header {
+      padding: 1.5rem 0 2rem;
+    }
+
+    .project-header h1 {
+      font-size: 2rem;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+    }
+
+    .project-image-hero {
+      padding: 2rem 0;
+    }
+
+    .project-content {
+      padding: 2rem 0;
+    }
+
+    .content-wrapper {
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+    }
+
+    .content-wrapper :global(h2) {
+      font-size: 1.5rem;
+    }
+
+    .content-wrapper :global(h3) {
+      font-size: 1.25rem;
+    }
+
+    .content-wrapper :global(p),
+    .content-wrapper :global(ul),
+    .content-wrapper :global(ol) {
+      font-size: 1rem;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .footer-info h2 {
+      font-size: 1.5rem;
+    }
+
+    .footer-contact {
+      align-items: center;
+    }
+
+    .social-links {
+      justify-content: center;
+    }
+  }
+</style>

@@ -1,0 +1,168 @@
+---
+---
+
+<section class="tech-stack section">
+	<div class="container">
+		<h2>Tecnologías y herramientas</h2>
+		<p class="intro">Trabajo con tecnologías modernas y probadas que garantizan aplicaciones rápidas, seguras y escalables.</p>
+
+		<div class="tech-categories">
+			<div class="tech-category">
+				<h3>Frontend & Mobile</h3>
+				<div class="tech-list">
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="tech-icon" />
+						<span>Flutter</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" class="tech-icon" />
+						<span>Vue.js</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg" alt="Astro" class="tech-icon" />
+						<span>Astro</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-icon" />
+						<span>HTML5 / CSS3</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-icon" />
+						<span>JavaScript</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="tech-category">
+				<h3>Backend & Databases</h3>
+				<div class="tech-list">
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="tech-icon" />
+						<span>Python</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" class="tech-icon" />
+						<span>FastAPI</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" class="tech-icon" />
+						<span>Firebase</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openapi/openapi-original.svg" alt="RESTful APIs" class="tech-icon" />
+						<span>RESTful APIs</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="tech-icon" />
+						<span>PostgreSQL</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tech-icon" />
+						<span>MongoDB</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="tech-category">
+				<h3>DevOps & Tools</h3>
+				<div class="tech-list">
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="tech-icon" />
+						<span>Git & GitHub</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Cloud" class="tech-icon" />
+						<span>Cloud Deployment</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="CI/CD" class="tech-icon" />
+						<span>CI/CD</span>
+					</div>
+					<div class="tech-item">
+						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="Responsive Design" class="tech-icon" />
+						<span>Responsive Design</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.tech-stack {
+		background-color: white;
+	}
+
+	.tech-stack h2 {
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.intro {
+		text-align: center;
+		font-size: 1.1rem;
+		max-width: 700px;
+		margin: 0 auto 3rem;
+		color: var(--color-text-light);
+	}
+
+	.tech-categories {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.tech-category {
+		background: var(--color-bg-alt);
+		padding: 2rem;
+		border-radius: 12px;
+		border: 1px solid var(--color-border);
+	}
+
+	.tech-category h3 {
+		color: var(--color-text);
+		margin-bottom: 1.5rem;
+		font-size: 1.35rem;
+		text-align: center;
+	}
+
+	.tech-list {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.tech-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.75rem 1rem;
+		background: white;
+		border-radius: 8px;
+		transition: all 0.3s ease;
+		border: 1px solid transparent;
+	}
+
+	.tech-item:hover {
+		transform: translateX(5px);
+		border-color: var(--color-primary);
+		box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+	}
+
+	.tech-icon {
+		width: 32px;
+		height: 32px;
+		object-fit: contain;
+		flex-shrink: 0;
+	}
+
+	.tech-item span:last-child {
+		font-weight: 500;
+		color: var(--color-text);
+	}
+
+	@media (max-width: 768px) {
+		.tech-categories {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

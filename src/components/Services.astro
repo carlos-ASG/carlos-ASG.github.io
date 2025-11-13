@@ -1,0 +1,156 @@
+---
+---
+
+<section class="services section" id="servicios">
+	<div class="container">
+		<h2>Servicios de desarrollo de software</h2>
+		<div class="services-grid">
+			<div class="service-card">
+				<div class="service-icon">
+					<img src="https://api.iconify.design/mdi/cellphone-link.svg?color=%233b82f6" alt="Mobile Apps" />
+				</div>
+				<h3>Aplicaciones Móviles Multiplataforma</h3>
+				<p>
+					Creo aplicaciones móviles nativas para iOS y Android utilizando Flutter, garantizando una experiencia de usuario fluida, interfaces atractivas y rendimiento óptimo. Desde apps de e-commerce hasta plataformas de gestión empresarial.
+				</p>
+				<div class="service-stack">
+					<span class="tech-badge">Flutter</span>
+					<span class="tech-badge">Firebase</span>
+					<span class="tech-badge">API REST</span>
+				</div>
+			</div>
+
+			<div class="service-card">
+				<div class="service-icon">
+					<img src="https://api.iconify.design/mdi/monitor-dashboard.svg?color=%233b82f6" alt="Web Platforms" />
+				</div>
+				<h3>Plataformas Web Modernas y Responsivas</h3>
+				<p>
+					Desarrollo sitios web y aplicaciones web progresivas (PWA) con tecnologías modernas. Desde landing pages optimizadas para conversión hasta dashboards complejos y sistemas de gestión.
+				</p>
+				<div class="service-stack">
+					<span class="tech-badge">Vue.js</span>
+					<span class="tech-badge">Astro</span>
+					<span class="tech-badge">HTML5/CSS3</span>
+				</div>
+			</div>
+
+			<div class="service-card">
+				<div class="service-icon">
+					<img src="https://api.iconify.design/mdi/server-network.svg?color=%233b82f6" alt="Backend Architecture" />
+				</div>
+				<h3>Arquitectura Backend Robusta y Escalable</h3>
+				<p>
+					Diseño e implemento APIs RESTful y servicios backend seguros y eficientes. Bases de datos optimizadas, autenticación, integración de servicios externos y arquitecturas que crecen con tu negocio.
+				</p>
+				<div class="service-stack">
+					<span class="tech-badge">Python</span>
+					<span class="tech-badge">FastAPI</span>
+					<span class="tech-badge">PostgreSQL</span>
+				</div>
+			</div>
+
+			<div class="service-card">
+				<div class="service-icon">
+					<img src="https://api.iconify.design/mdi/lightbulb-on-outline.svg?color=%233b82f6" alt="Technical Consulting" />
+				</div>
+				<h3>Asesoría Técnica y Desarrollo a Medida</h3>
+				<p>
+					¿Tienes un desafío técnico específico? Ofrezco consultoría para ayudarte a elegir las mejores tecnologías, optimizar sistemas existentes o planificar la arquitectura de tu próximo proyecto.
+				</p>
+				<div class="service-stack">
+					<span class="tech-badge">Consultoría</span>
+					<span class="tech-badge">Arquitectura</span>
+					<span class="tech-badge">Optimización</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.services {
+		background: linear-gradient(180deg, white 0%, var(--color-bg-alt) 100%);
+	}
+
+	.services h2 {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+	}
+
+	.service-card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+		transition: all 0.3s ease;
+		border: 1px solid var(--color-border);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.service-card:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+		border-color: var(--color-primary);
+	}
+
+	.service-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.service-icon img {
+		width: 64px;
+		height: 64px;
+		object-fit: contain;
+	}
+
+	.service-card h3 {
+		color: var(--color-text);
+		margin-bottom: 1rem;
+		font-size: 1.35rem;
+	}
+
+	.service-card p {
+		flex-grow: 1;
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
+	}
+
+	.service-stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: auto;
+	}
+
+	.tech-badge {
+		display: inline-block;
+		padding: 0.4rem 0.8rem;
+		background: var(--color-bg-alt);
+		color: var(--color-primary);
+		border-radius: 6px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		border: 1px solid var(--color-primary);
+	}
+
+	@media (max-width: 768px) {
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.service-card {
+			padding: 2rem;
+		}
+	}
+</style>

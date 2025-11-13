@@ -1,22 +1,174 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = "Carlos Sandoval | Desarrollador de Software Freelance | Flutter, Python & Vue.js",
+	description = "Ingeniero de Software con +3 años de experiencia en desarrollo web, móvil y backend. Creo soluciones digitales que impulsan negocios. Portfolio y contacto."
+} = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content="Desarrollador de software freelance, Ingeniero de software México, Desarrollo de aplicaciones móviles, Desarrollador Flutter, Desarrollador Python, Desarrollo web Vue.js" />
+		<meta name="author" content="Carlos Alberto Sandoval Guardado" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
+<style is:global>
+	:root {
+		--color-primary: #3b82f6;
+		--color-primary-dark: #2563eb;
+		--color-text: #1f2937;
+		--color-text-light: #6b7280;
+		--color-bg: #ffffff;
+		--color-bg-alt: #f9fafb;
+		--color-border: #e5e7eb;
+		--max-width: 1200px;
+		--spacing-xs: 0.5rem;
+		--spacing-sm: 1rem;
+		--spacing-md: 2rem;
+		--spacing-lg: 4rem;
+		--spacing-xl: 6rem;
+	}
+
+	* {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		color: var(--color-text);
+		line-height: 1.6;
+		background-color: var(--color-bg);
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 700;
+		line-height: 1.2;
+		color: var(--color-text);
+	}
+
+	h1 {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		margin-bottom: 1rem;
+	}
+
+	h2 {
+		font-size: clamp(2rem, 4vw, 3rem);
+		margin-bottom: 1rem;
+	}
+
+	h3 {
+		font-size: clamp(1.5rem, 3vw, 2rem);
+		margin-bottom: 0.75rem;
+	}
+
+	p {
+		margin-bottom: 1rem;
+		color: var(--color-text-light);
+	}
+
+	a {
+		color: var(--color-primary);
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	a:hover {
+		color: var(--color-primary-dark);
+	}
+
+	.container {
+		max-width: var(--max-width);
+		margin: 0 auto;
+		padding: 0 var(--spacing-md);
+	}
+
+	.section {
+		padding: var(--spacing-xl) 0;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.875rem 2rem;
+		font-size: 1rem;
+		font-weight: 600;
+		border-radius: 0.5rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		border: none;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.btn-primary {
+		background-color: var(--color-primary);
+		color: white !important;
+	}
+
+	.btn-primary:hover {
+		background-color: var(--color-primary-dark);
+		color: white !important;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+	}
+
+	.btn-secondary {
+		background-color: transparent;
+		color: var(--color-primary);
+		border: 2px solid var(--color-primary);
+	}
+
+	.btn-secondary:hover {
+		background-color: var(--color-primary);
+		color: white;
+	}
+
+	@media (max-width: 768px) {
+		:root {
+			--spacing-lg: 3rem;
+			--spacing-xl: 4rem;
+		}
+
+		.btn {
+			padding: 0.75rem 1.5rem;
+			font-size: 0.9rem;
+		}
 	}
 </style>

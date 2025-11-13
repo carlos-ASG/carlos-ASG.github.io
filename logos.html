@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Carlos Sandoval - Versiones SVG</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .logo-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .logo-card:hover {
+            transform: translateY(-5px);
+        }
+        .logo-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #003366;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .dark-bg {
+            background: #1a1a1a;
+        }
+        .code-section {
+            background: #2d2d2d;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        .code-section pre {
+            margin: 0;
+            overflow-x: auto;
+            color: #a9b7c6;
+            font-size: 12px;
+            font-family: 'Courier New', monospace;
+        }
+        .copy-btn {
+            background: #003366;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+        .copy-btn:hover {
+            background: #0066CC;
+        }
+        .copy-btn:active {
+            background: #002244;
+        }
+        .notes {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-top: 40px;
+        }
+        .notes h2 {
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        .notes ul {
+            line-height: 1.8;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Logo Carlos Sandoval</h1>
+        <p class="subtitle">Versiones profesionales para tu portfolio</p>
+
+        <div class="logo-grid">
+            <!-- VERSIÓN 1: Logo Horizontal Completo -->
+            <div class="logo-card">
+                <h3 class="logo-title">Versión 1: Horizontal Completo</h3>
+                <div class="logo-container">
+                    <svg width="500" height="120" viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Letra S con circuito -->
+                        <g id="s-circuit">
+                            <!-- S principal -->
+                            <path d="M 30 30 C 30 15 45 10 55 10 C 65 10 75 15 75 25 C 75 35 65 40 55 45 L 45 50 C 35 55 25 60 25 70 C 25 80 35 90 50 90 C 65 90 70 85 70 75" 
+                                  stroke="#003366" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            
+                            <!-- Nodos del circuito -->
+                            <circle cx="55" cy="10" r="3" fill="#0066CC"/>
+                            <circle cx="75" cy="25" r="3" fill="#0066CC"/>
+                            <circle cx="55" cy="45" r="3" fill="#0066CC"/>
+                            <circle cx="45" cy="50" r="3" fill="#0066CC"/>
+                            <circle cx="25" cy="70" r="3" fill="#0066CC"/>
+                            <circle cx="50" cy="90" r="3" fill="#0066CC"/>
+                            
+                            <!-- Líneas de circuito -->
+                            <line x1="55" y1="10" x2="75" y2="25" stroke="#0066CC" stroke-width="1.5"/>
+                            <line x1="75" y1="25" x2="55" y2="45" stroke="#0066CC" stroke-width="1.5"/>
+                            <line x1="55" y1="45" x2="45" y2="50" stroke="#0066CC" stroke-width="1.5"/>
+                            <line x1="45" y1="50" x2="25" y2="70" stroke="#0066CC" stroke-width="1.5"/>
+                            <line x1="25" y1="70" x2="50" y2="90" stroke="#0066CC" stroke-width="1.5"/>
+                        </g>
+                        
+                        <!-- Texto SANDOVAL -->
+                        <text x="110" y="55" font-family="'Montserrat', 'Arial', sans-serif" font-size="38" font-weight="700" fill="#003366">SANDOVAL</text>
+                        
+                        <!-- Subtítulo -->
+                        <text x="110" y="80" font-family="'Montserrat', 'Arial', sans-serif" font-size="14" font-weight="400" fill="#0066CC" letter-spacing="1">FULL STACK SOFTWARE ENGINEER</text>
+                    </svg>
+                </div>
+                <button class="copy-btn" onclick="copySVG('version1')">Copiar SVG</button>
+                <div class="code-section" id="version1" style="display:none;">
+                    <pre>&lt;svg width="500" height="120" viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;g id="s-circuit"&gt;
+    &lt;path d="M 30 30 C 30 15 45 10 55 10 C 65 10 75 15 75 25 C 75 35 65 40 55 45 L 45 50 C 35 55 25 60 25 70 C 25 80 35 90 50 90 C 65 90 70 85 70 75" 
+          stroke="#003366" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+    &lt;circle cx="55" cy="10" r="3" fill="#0066CC"/&gt;
+    &lt;circle cx="75" cy="25" r="3" fill="#0066CC"/&gt;
+    &lt;circle cx="55" cy="45" r="3" fill="#0066CC"/&gt;
+    &lt;circle cx="45" cy="50" r="3" fill="#0066CC"/&gt;
+    &lt;circle cx="25" cy="70" r="3" fill="#0066CC"/&gt;
+    &lt;circle cx="50" cy="90" r="3" fill="#0066CC"/&gt;
+    &lt;line x1="55" y1="10" x2="75" y2="25" stroke="#0066CC" stroke-width="1.5"/&gt;
+    &lt;line x1="75" y1="25" x2="55" y2="45" stroke="#0066CC" stroke-width="1.5"/&gt;
+    &lt;line x1="55" y1="45" x2="45" y2="50" stroke="#0066CC" stroke-width="1.5"/&gt;
+    &lt;line x1="45" y1="50" x2="25" y2="70" stroke="#0066CC" stroke-width="1.5"/&gt;
+    &lt;line x1="25" y1="70" x2="50" y2="90" stroke="#0066CC" stroke-width="1.5"/&gt;
+  &lt;/g&gt;
+  &lt;text x="110" y="55" font-family="'Montserrat', 'Arial', sans-serif" font-size="38" font-weight="700" fill="#003366"&gt;SANDOVAL&lt;/text&gt;
+  &lt;text x="110" y="80" font-family="'Montserrat', 'Arial', sans-serif" font-size="14" font-weight="400" fill="#0066CC" letter-spacing="1"&gt;FULL STACK SOFTWARE ENGINEER&lt;/text&gt;
+&lt;/svg&gt;</pre>
+                </div>
+            </div>
+
+            <!-- VERSIÓN 2: Logo Compacto -->
+            <div class="logo-card">
+                <h3 class="logo-title">Versión 2: Compacto Vertical</h3>
+                <div class="logo-container">
+                    <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- S con circuito centrada -->
+                        <g transform="translate(70, 30)">
+                            <path d="M 30 30 C 30 15 45 10 55 10 C 65 10 75 15 75 25 C 75 35 65 40 55 45 L 45 50 C 35 55 25 60 25 70 C 25 80 35 90 50 90 C 65 90 70 85 70 75" 
+                                  stroke="#003366" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="55" cy="10" r="3.5" fill="#0066CC"/>
+                            <circle cx="75" cy="25" r="3.5" fill="#0066CC"/>
+                            <circle cx="55" cy="45" r="3.5" fill="#0066CC"/>
+                            <circle cx="45" cy="50" r="3.5" fill="#0066CC"/>
+                            <circle cx="25" cy="70" r="3.5" fill="#0066CC"/>
+                            <circle cx="50" cy="90" r="3.5" fill="#0066CC"/>
+                            <line x1="55" y1="10" x2="75" y2="25" stroke="#0066CC" stroke-width="2"/>
+                            <line x1="75" y1="25" x2="55" y2="45" stroke="#0066CC" stroke-width="2"/>
+                            <line x1="55" y1="45" x2="45" y2="50" stroke="#0066CC" stroke-width="2"/>
+                            <line x1="45" y1="50" x2="25" y2="70" stroke="#0066CC" stroke-width="2"/>
+                            <line x1="25" y1="70" x2="50" y2="90" stroke="#0066CC" stroke-width="2"/>
+                        </g>
+                        
+                        <!-- Texto centrado -->
+                        <text x="100" y="150" font-family="'Montserrat', sans-serif" font-size="24" font-weight="700" fill="#003366" text-anchor="middle">SANDOVAL</text>
+                        <text x="100" y="170" font-family="'Montserrat', sans-serif" font-size="10" font-weight="400" fill="#0066CC" text-anchor="middle" letter-spacing="0.5">SOFTWARE ENGINEER</text>
+                    </svg>
+                </div>
+                <button class="copy-btn" onclick="copySVG('version2')">Copiar SVG</button>
+                <div class="code-section" id="version2" style="display:none;">
+                    <pre>&lt;svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;g transform="translate(70, 30)"&gt;
+    &lt;path d="M 30 30 C 30 15 45 10 55 10 C 65 10 75 15 75 25 C 75 35 65 40 55 45 L 45 50 C 35 55 25 60 25 70 C 25 80 35 90 50 90 C 65 90 70 85 70 75" 
+          stroke="#003366" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+    &lt;circle cx="55" cy="10" r="3.5" fill="#0066CC"/&gt;
+    &lt;circle cx="75" cy="25" r="3.5" fill="#0066CC"/&gt;
+    &lt;circle cx="55" cy="45" r="3.5" fill="#0066CC"/&gt;
+    &lt;circle cx="45" cy="50" r="3.5" fill="#0066CC"/&gt;
+    &lt;circle cx="25" cy="70" r="3.5" fill="#0066CC"/&gt;
+    &lt;circle cx="50" cy="90" r="3.5" fill="#0066CC"/&gt;
+    &lt;line x1="55" y1="10" x2="75" y2="25" stroke="#0066CC" stroke-width="2"/&gt;
+    &lt;line x1="75" y1="25" x2="55" y2="45" stroke="#0066CC" stroke-width="2"/&gt;
+    &lt;line x1="55" y1="45" x2="45" y2="50" stroke="#0066CC" stroke-width="2"/&gt;
+    &lt;line x1="45" y1="50" x2="25" y2="70" stroke="#0066CC" stroke-width="2"/&gt;
+    &lt;line x1="25" y1="70" x2="50" y2="90" stroke="#0066CC" stroke-width="2"/&gt;
+  &lt;/g&gt;
+  &lt;text x="100" y="150" font-family="'Montserrat', sans-serif" font-size="24" font-weight="700" fill="#003366" text-anchor="middle"&gt;SANDOVAL&lt;/text&gt;
+  &lt;text x="100" y="170" font-family="'Montserrat', sans-serif" font-size="10" font-weight="400" fill="#0066CC" text-anchor="middle" letter-spacing="0.5"&gt;SOFTWARE ENGINEER&lt;/text&gt;
+&lt;/svg&gt;</pre>
+                </div>
+            </div>
+
+            <!-- VERSIÓN 3: Solo Icono (para favicon) -->
+            <div class="logo-card">
+                <h3 class="logo-title">Versión 3: Icono Solo (Favicon)</h3>
+                <div class="logo-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Fondo circular opcional -->
+                        <circle cx="60" cy="60" r="55" fill="#003366"/>
+                        
+                        <!-- S con circuito centrada y en blanco -->
+                        <g transform="translate(30, 15)">
+                            <path d="M 30 30 C 30 15 45 10 55 10 C 65 10 75 15 75 25 C 75 35 65 40 55 45 L 45 50 C 35 55 25 60 25 70 C 25 80 35 90 50 90 C 65 90 70 85 70 75" 
+                                  stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="55" cy="10" r="4" fill="#0066CC"/>
+                            <circle cx="75" cy="25" r="4" fill="#0066CC"/>
+                            <circle cx="55" cy="45" r="4" fill="#0066CC"/>
+                            <circle cx="45" cy="50" r="4" fill="#0066CC"/>
+                            <circle cx="25" cy="70" r="4" fill="#0066CC"/>
+                            <circle cx="50" cy="90" r="4" fill="#0066CC"/>
+                            <line x1="55" y1="10" x2="75" y2="25" stroke="#0066CC" stroke-width="2.5"/>
+                            <line x1="75" y1="25" x2="55" y2="45" stroke="#0066CC" stroke-width="2.5"/>
+                            <line x1="55" y1="45" x2="45" y2="50" stroke="#0066CC" stroke-width="2.5"/>
+                            <line x1="45" y1="50" x2="25" y2="70" stroke="#0066CC" stroke-width="2.5"/>
+                            <line x1="25" y1="70" x2="50" y2="90" stroke="#0066CC" stroke-width="2.5"/>
+                        </g>
+                    </svg>
+                </div>
+                <button class="copy-btn" onclick="copySVG('version3')">Copiar SVG</button>
+                <div class="code-section" id="version3" style="display:none;">
+                    <pre>&lt;svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;circle cx="60" cy="60" r="55" fill="#003366"/&gt;
+  &lt;g transform="translate(30, 15)"&gt;
+    &lt;path d="M 30 30 C 30 15 45 10 55 10 C 65 10 75 15 75 25 C 75 35 65 40 55 45 L 45 50 C 35 55 25 60 25 70 C 25 80 35 90 50 90 C 65 90 70 85 70 75" 
+          stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+    &lt;circle cx="55" cy="10" r="4" fill="#0066CC"/&gt;
+    &lt;circle cx="75" cy="25" r="4" fill="#0066CC"/&gt;
+    &lt;circle cx="55" cy="45" r="4" fill="#0066CC"/&gt;
+    &lt;circle cx="45" cy="50" r="4" fill="#0066CC"/&gt;
+    &lt;circle cx="25" cy="70" r="4" fill="#0066CC"/&gt;
+    &lt;circle cx="50" cy="90" r="4" fill="#0066CC"/&gt;
+    &lt;line x1="55" y1="10" x2="75" y2="25" stroke="#0066CC" stroke-width="2.5"/&gt;
+    &lt;line x1="75" y1="25" x2="55" y2="45" stroke="#0066CC" stroke-width="2.5"/&gt;
+    &lt;line x1="55" y1="45" x2="45" y2="50" stroke="#0066CC" stroke-width="2.5"/&gt;
+    &lt;line x1="45" y1="50" x2="25" y2="70" stroke="#0066CC" stroke-width="2.5"/&gt;
+    &lt;line x1="25" y1="70" x2="50" y2="90" stroke="#0066CC" stroke-width="2.5"/&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</pre>
+                </div>
+            </div>
+
+            <!-- VERSIÓN 4: Logo con fondo oscuro -->
+            <div class="logo-card">
+                <h3 class="logo-title">Versión 4: Para fondos oscuros</h3>
+                <div class="logo-container dark-bg">
+                    <svg width="500" height="120" viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg">
+                        <!-- S con circuito -->
+                        <g id="s-circuit-dark">
+                            <path d="M 30 30 C 30 15 45 10 55 10 C 65 10 75 15 75 25 C 75 35 65 40 55 45 L 45 50 C 35 55 25 60 25 70 C 25 80 35 90 50 90 C 65 90 70 85 70 75" 
+                                  stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="55" cy="10" r="3" fill="#3B82F6"/>
+                            <circle cx="75" cy="25" r="3" fill="#3B82F6"/>
+                            <circle cx="55" cy="45" r="3" fill="#3B82F6"/>
+                            <circle cx="45" cy="50" r="3" fill="#3B82F6"/>
+                            <circle cx="25" cy="70" r="3" fill="#3B82F6"/>
+                            <circle cx="50" cy="90" r="3" fill="#3B82F6"/>
+                            <line x1="55" y1="10" x2="75" y2="25" stroke="#3B82F6" stroke-width="1.5"/>
+                            <line x1="75" y1="25" x2="55" y2="45" stroke="#3B82F6" stroke-width="1.5"/>
+                            <line x1="55" y1="45" x2="45" y2="50" stroke="#3B82F6" stroke-width="1.5"/>
+                            <line x1="45" y1="50" x2="25" y2="70" stroke="#3B82F6" stroke-width="1.5"/>
+                            <line x1="25" y1="70" x2="50" y2="90" stroke="#3B82F6" stroke-width="1.5"/>
+                        </g>
+                        
+                        <text x="110" y="55" font-family="'Montserrat', 'Arial', sans-serif" font-size="38" font-weight="700" fill="#ffffff">SANDOVAL</text>
+                        <text x="110" y="80" font-family="'Montserrat', 'Arial', sans-serif" font-size="14" font-weight="400" fill="#3B82F6" letter-spacing="1">FULL STACK SOFTWARE ENGINEER</text>
+                    </svg>
+                </div>
+                <button class="copy-btn" onclick="copySVG('version4')">Copiar SVG</button>
+                <div class="code-section" id="version4" style="display:none;">
+                    <pre>&lt;svg width="500" height="120" viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;g id="s-circuit-dark"&gt;
+    &lt;path d="M 30 30 C 30 15 45 10 55 10 C 65 10 75 15 75 25 C 75 35 65 40 55 45 L 45 50 C 35 55 25 60 25 70 C 25 80 35 90 50 90 C 65 90 70 85 70 75" 
+          stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+    &lt;circle cx="55" cy="10" r="3" fill="#3B82F6"/&gt;
+    &lt;circle cx="75" cy="25" r="3" fill="#3B82F6"/&gt;
+    &lt;circle cx="55" cy="45" r="3" fill="#3B82F6"/&gt;
+    &lt;circle cx="45" cy="50" r="3" fill="#3B82F6"/&gt;
+    &lt;circle cx="25" cy="70" r="3" fill="#3B82F6"/&gt;
+    &lt;circle cx="50" cy="90" r="3" fill="#3B82F6"/&gt;
+    &lt;line x1="55" y1="10" x2="75" y2="25" stroke="#3B82F6" stroke-width="1.5"/&gt;
+    &lt;line x1="75" y1="25" x2="55" y2="45" stroke="#3B82F6" stroke-width="1.5"/&gt;
+    &lt;line x1="55" y1="45" x2="45" y2="50" stroke="#3B82F6" stroke-width="1.5"/&gt;
+    &lt;line x1="45" y1="50" x2="25" y2="70" stroke="#3B82F6" stroke-width="1.5"/&gt;
+    &lt;line x1="25" y1="70" x2="50" y2="90" stroke="#3B82F6" stroke-width="1.5"/&gt;
+  &lt;/g&gt;
+  &lt;text x="110" y="55" font-family="'Montserrat', 'Arial', sans-serif" font-size="38" font-weight="700" fill="#ffffff"&gt;SANDOVAL&lt;/text&gt;
+  &lt;text x="110" y="80" font-family="'Montserrat', 'Arial', sans-serif" font-size="14" font-weight="400" fill="#3B82F6" letter-spacing="1"&gt;FULL STACK SOFTWARE ENGINEER&lt;/text&gt;
+&lt;/svg&gt;</pre>
+                </div>
+            </div>
+
+            <!-- VERSIÓN 5: Minimalista sin circuito -->
+            <div class="logo-card">
+                <h3 class="logo-title">Versión 5: Minimalista Simple</h3>
+                <div class="logo-container">
+                    <svg width="450" height="100" viewBox="0 0 450 100" xmlns="http://www.w3.org/2000/svg">
+                        <!-- S simple sin circuito -->
+                        <path d="M 25 25 C 25 12 38 5 50 5 C 62 5 72 12 72 22 C 72 32 62 37 50 42 L 40 47 C 30 52 20 57 20 67 C 20 77 30 87 45 87 C 60 87 67 82 67 72" 
+                              stroke="#003366" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        
+                        <text x="100" y="50" font-family="'Montserrat', 'Arial', sans-serif" font-size="42" font-weight="700" fill="#003366">SANDOVAL</text>
+                        <text x="100" y="73" font-family="'Montserrat', 'Arial', sans-serif" font-size="13" font-weight="400" fill="#0066CC" letter-spacing="1.5">FULL STACK SOFTWARE ENGINEER</text>
+                    </svg>
+                </div>
+                <button class="copy-btn" onclick="copySVG('version5')">Copiar SVG</button>
+                <div class="code-section" id="version5" style="display:none;">
+                    <pre>&lt;svg width="450" height="100" viewBox="0 0 450 100" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;path d="M 25 25 C 25 12 38 5 50 5 C 62 5 72 12 72 22 C 72 32 62 37 50 42 L 40 47 C 30 52 20 57 20 67 C 20 77 30 87 45 87 C 60 87 67 82 67 72" 
+        stroke="#003366" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+  &lt;text x="100" y="50" font-family="'Montserrat', 'Arial', sans-serif" font-size="42" font-weight="700" fill="#003366"&gt;SANDOVAL&lt;/text&gt;
+  &lt;text x="100" y="73" font-family="'Montserrat', 'Arial', sans-serif" font-size="13" font-weight="400" fill="#0066CC" letter-spacing="1.5"&gt;FULL STACK SOFTWARE ENGINEER&lt;/text&gt;
+&lt;/svg&gt;</pre>
+                </div>
+            </div>
+
+            <!-- VERSIÓN 6: Moderno con gradiente -->
+            <div class="logo-card">
+                <h3 class="logo-title">Versión 6: Con gradiente moderno</h3>
+                <div class="logo-container">
+                    <svg width="500" height="120" viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- S con circuito -->
+                        <g>
+                            <path d="M 30 30 C 30 15 45 10 55 10 C 65 10 75 15 75 25 C 75 35 65 40 55 45 L 45 50 C 35 55 25 60 25 70 C 25 80 35 90 50 90 C 65 90 70 85 70 75" 
+                                  stroke="url(#blueGradient)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="55" cy="10" r="3" fill="#0066CC"/>
+                            <circle cx="75" cy="25" r="3" fill="#0066CC"/>
+                            <circle cx="55" cy="45" r="3" fill="#0066CC"/>
+                            <circle cx="45" cy="50" r="3" fill="#0066CC"/>
+                            <circle cx="25" cy="70" r="3" fill="#0066CC"/>
+                            <circle cx="50" cy="90" r="3" fill="#0066CC"/>
+                            <line x1="55" y1="10" x2="75" y2="25" stroke="#0066CC" stroke-width="1.5" opacity="0.6"/>
+                            <line x1="75" y1="25" x2="55" y2="45" stroke="#0066CC" stroke-width="1.5" opacity="0.6"/>
+                            <line x1="55" y1="45" x2="45" y2="50" stroke="#0066CC" stroke-width="1.5" opacity="0.6"/>
+                            <line x1="45" y1="50" x2="25" y2="70" stroke="#0066CC" stroke-width="1.5" opacity="0.6"/>
+                            <line x1="25" y1="70" x2="50" y2="90" stroke="#0066CC" stroke-width="1.5" opacity="0.6"/>
+                        </g>
+                        
+                        <text x="110" y="55" font-family="'Montserrat', 'Arial', sans-serif" font-size="38" font-weight="700" fill="url(#blueGradient)">SANDOVAL</text>
+                        <text x="110" y="80" font-family="'Montserrat', 'Arial', sans-serif" font-size="14" font-weight="400" fill="#0066CC" letter-spacing="1">FULL STACK SOFTWARE ENGINEER</text>
+                    </svg>
+                </div>
+                <button class="copy-btn" onclick="copySVG('version6')">Copiar SVG</button>
+                <div class="code-section" id="version6" style="display:none;">
+                    <pre>&lt;svg width="500" height="120" viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%"&gt;
+      &lt;stop offset="0%" style="stop-color:#003366;stop-opacity:1" /&gt;
+      &lt;stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" /&gt;
+    &lt;/linearGradient&gt;
+  &lt;/defs&gt;
+  &lt;g&gt;
+    &lt;path d="M 30 30 C 30 15 45 10 55 10 C 65 10 75 15 75 25 C 75 35 65 40 55 45 L 45 50 C 35 55 25 60 25 70 C 25 80 35 90 50 90 C 65 90 70 85 70 75" 
+          stroke="url(#blueGradient)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/&gt;
+    &lt;circle cx="55" cy="10" r="3" fill="#0066CC"/&gt;
+    &lt;circle cx="75" cy="25" r="3" fill="#0066CC"/&gt;
+    &lt;circle cx="55" cy="45" r="3" fill="#0066CC"/&gt;
+    &lt;circle cx="45" cy="50" r="3" fill="#0066CC"/&gt;
+    &lt;circle cx="25" cy="70" r="3" fill="#0066CC"/&gt;
+    &lt;circle cx="50" cy="90" r="3" fill="#0066CC"/&gt;
+    &lt;line x1="55" y1="10" x2="75" y2="25" stroke="#0066CC" stroke-width="1.5" opacity="0.6"/&gt;
+    &lt;line x1="75" y1="25" x2="55" y2="45" stroke="#0066CC" stroke-width="1.5" opacity="0.6"/&gt;
+    &lt;line x1="55" y1="45" x2="45" y2="50" stroke="#0066CC" stroke-width="1.5" opacity="0.6"/&gt;
+    &lt;line x1="45" y1="50" x2="25" y2="70" stroke="#0066CC" stroke-width="1.5" opacity="0.6"/&gt;
+    &lt;line x1="25" y1="70" x2="50" y2="90" stroke="#0066CC" stroke-width="1.5" opacity="0.6"/&gt;
+  &lt;/g&gt;
+  &lt;text x="110" y="55" font-family="'Montserrat', 'Arial', sans-serif" font-size="38" font-weight="700" fill="url(#blueGradient)"&gt;SANDOVAL&lt;/text&gt;
+  &lt;text x="110" y="80" font-family="'Montserrat', 'Arial', sans-serif" font-size="14" font-weight="400" fill="#0066CC" letter-spacing="1"&gt;FULL STACK SOFTWARE ENGINEER&lt;/text&gt;
+&lt;/svg&gt;</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="notes">
+            <h2>📋 Notas de Implementación</h2>
+            <ul>
+                <li><strong>Versión 1 (Horizontal Completo):</strong> Ideal para header de tu sitio web y LinkedIn</li>
+                <li><strong>Versión 2 (Compacto Vertical):</strong> Perfecto para tarjetas de presentación y perfiles de redes sociales</li>
+                <li><strong>Versión 3 (Favicon):</strong> Úsalo para el favicon de tu sitio (convierte a .ico o .png)</li>
+                <li><strong>Versión 4 (Fondo Oscuro):</strong> Para secciones con fondos oscuros en tu portfolio</li>
+                <li><strong>Versión 5 (Minimalista):</strong> Versión limpia sin elementos de circuito, muy profesional</li>
+                <li><strong>Versión 6 (Gradiente):</strong> Versión moderna con efectos visuales atractivos</li>
+            </ul>
+            
+            <h2>🎨 Paleta de Colores</h2>
+            <ul>
+                <li><strong>Azul Oscuro Principal:</strong> #003366</li>
+                <li><strong>Azul Medio (Acentos):</strong> #0066CC</li>
+                <li><strong>Azul Claro (Alternativa):</strong> #3B82F6</li>
+                <li><strong>Blanco:</strong> #ffffff (para fondos oscuros)</li>
+            </ul>
+
+            <h2>💡 Recomendaciones</h2>
+            <ul>
+                <li>Carga la fuente Montserrat desde Google Fonts para mejor rendimiento</li>
+                <li>Los SVG son escalables - puedes ajustar width/height sin perder calidad</li>
+                <li>Usa la Versión 1 o 6 para el header principal de tu portfolio</li>
+                <li>El atributo viewBox permite que el logo sea responsive</li>
+                <li>Puedes cambiar los colores fácilmente editando los valores stroke y fill</li>
+                <li>Para exportar a PNG, usa herramientas como Inkscape o convertidores online</li>
+            </ul>
+
+            <h2>🔗 Google Fonts (Incluir en tu HTML)</h2>
+            <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px; overflow-x: auto;"><code>&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"&gt;</code></pre>
+        </div>
+    </div>
+
+    <script>
+        function copySVG(versionId) {
+            const codeSection = document.getElementById(versionId);
+            const preElement = codeSection.querySelector('pre');
+            const svgCode = preElement.textContent;
+            
+            navigator.clipboard.writeText(svgCode).then(() => {
+                const button = codeSection.previousElementSibling;
+                const originalText = button.textContent;
+                button.textContent = '✓ Copiado!';
+                button.style.background = '#10b981';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#003366';
+                }, 2000);
+            });
+            
+            // Toggle visibility del código
+            if (codeSection.style.display === 'none') {
+                codeSection.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+---
+// Componente de navegación para vistas de proyectos
+import BaseNavLayout from '../../layouts/BaseNavLayout.astro';
+---
+
+<BaseNavLayout>
+	<li><a href="/" class="back-home btn btn-primary btn-sm">← Volver al inicio</a></li>
+</BaseNavLayout>
+
+<style>
+	:global(.nav-links .back-home) {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25rem;
+		font-weight: 600;
+		transition: transform 0.2s ease, color 0.3s ease;
+	}
+
+	:global(.nav-links .back-home:hover) {
+		transform: translateX(-3px);
+	}
+</style>
