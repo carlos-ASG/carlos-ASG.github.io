@@ -13,7 +13,7 @@ interface Props {
 const { title, description, image, date, tags } = Astro.props;
 
 // Formatear la fecha
-const formattedDate = new Intl.DateTimeFormat('es-ES', {
+const formattedDate = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
   month: 'long',
   day: 'numeric'
@@ -61,12 +61,12 @@ const formattedDate = new Intl.DateTimeFormat('es-ES', {
       <div class="container">
         <div class="footer-content">
           <div class="footer-info">
-            <h2>¿Interesado en trabajar juntos?</h2>
-            <p>Estoy disponible para proyectos freelance y oportunidades de colaboración.</p>
+            <h2>Interested in working together?</h2>
+            <p>I'm available for freelance projects and collaboration opportunities.</p>
           </div>
           <div class="footer-contact">
             <a href="mailto:devcarsan@gmail.com" class="btn btn-primary">
-              Contáctame
+              Contact me
             </a>
             <div class="social-links">
               <a href="https://github.com/devcarsan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">

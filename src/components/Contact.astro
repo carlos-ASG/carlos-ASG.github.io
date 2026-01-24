@@ -3,20 +3,20 @@
 
 <section class="contact section" id="contacto">
 	<div class="container">
-		<h2>Hablemos de tu proyecto</h2>
+		<h2>Let's talk about your project</h2>
 		<p class="contact-intro">
-			Estoy disponible para proyectos nuevos y siempre abierto a colaboraciones interesantes. Cuéntame sobre tu idea y encontremos juntos la mejor solución tecnológica.
+			I'm available for new projects and always open to interesting collaborations. Tell me about your idea and let's find the best technological solution together.
 		</p>
 
 		<div class="contact-content">
 			<div class="contact-info">
-				<h3>Información de contacto</h3>
+				<h3>Contact Information</h3>
 				<div class="contact-methods">
 					<div class="contact-method">
 						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email" class="method-icon" />
 						<div>
 							<h4>Email</h4>
-							<a href="mailto:tu-email@ejemplo.com">tu-email@ejemplo.com</a>
+							<a href="mailto:devcarsan@gmail.com">devcarsan@gmail.com</a>
 						</div>
 					</div>
 
@@ -24,8 +24,8 @@
 						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="method-icon" />
 						<div>
 							<h4>LinkedIn</h4>
-							<a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener noreferrer">
-								linkedin.com/in/tu-perfil
+							<a href="www.linkedin.com/in/carlos-alberto-sandoval-guardado-496091398" target="_blank" rel="noopener noreferrer">
+								www.linkedin.com/in/carlos-alberto-sandoval-guardado-496091398
 							</a>
 						</div>
 					</div>
@@ -34,8 +34,8 @@
 						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="method-icon" />
 						<div>
 							<h4>GitHub</h4>
-							<a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">
-								github.com/tu-usuario
+							<a href="https://github.com/carlos-ASG" target="_blank" rel="noopener noreferrer">
+								github.com/carlos-ASG
 							</a>
 						</div>
 					</div>
@@ -44,38 +44,11 @@
 						<img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp" class="method-icon" />
 						<div>
 							<h4>WhatsApp</h4>
-							<a href="https://wa.me/1234567890">+1 (234) 567-890</a>
+							<a href="https://wa.me/523113001151">+52 (311) 300-1151</a>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-				<input type="hidden" name="form-name" value="contact" />
-				<input type="hidden" name="bot-field" />
-
-				<div class="form-group">
-					<label for="name">Nombre completo *</label>
-					<input type="text" id="name" name="name" required placeholder="Tu nombre" />
-				</div>
-
-				<div class="form-group">
-					<label for="email">Email *</label>
-					<input type="email" id="email" name="email" required placeholder="tu@email.com" />
-				</div>
-
-				<div class="form-group">
-					<label for="company">Empresa/Proyecto</label>
-					<input type="text" id="company" name="company" placeholder="Nombre de tu empresa o proyecto" />
-				</div>
-
-				<div class="form-group">
-					<label for="message">Cuéntame sobre tu proyecto *</label>
-					<textarea id="message" name="message" rows="6" required placeholder="Describe tu proyecto, necesidades o cualquier pregunta que tengas..."></textarea>
-				</div>
-
-				<button type="submit" class="btn btn-primary btn-full">Enviar mensaje</button>
-			</form>
 		</div>
 	</div>
 </section>
@@ -99,33 +72,41 @@
 	}
 
 	.contact-content {
-		display: grid;
-		grid-template-columns: 1fr 1.5fr;
-		gap: 4rem;
-		align-items: start;
+		max-width: 600px;
+		margin: 0 auto;
 	}
 
 	.contact-info h3 {
 		color: var(--color-text);
 		margin-bottom: 2rem;
+		text-align: center;
 	}
 
 	.contact-methods {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
+		align-items: center;
 	}
 
 	.contact-method {
 		display: flex;
 		gap: 1rem;
 		align-items: flex-start;
+		justify-content: center;
+		width: 100%;
+		max-width: 400px;
 	}
 
 	.method-icon {
 		width: 2.5rem;
 		height: 2.5rem;
 		flex-shrink: 0;
+		margin-top: 0.25rem;
+	}
+
+	.contact-method > div {
+		flex: 1;
 	}
 
 	.contact-method h4 {
@@ -142,70 +123,5 @@
 
 	.contact-method a:hover {
 		color: var(--color-primary);
-	}
-
-	.contact-form {
-		background: white;
-		padding: 2.5rem;
-		border-radius: 12px;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-		border: 1px solid var(--color-border);
-	}
-
-	.form-group {
-		margin-bottom: 1.5rem;
-	}
-
-	.form-group label {
-		display: block;
-		margin-bottom: 0.5rem;
-		color: var(--color-text);
-		font-weight: 600;
-		font-size: 0.95rem;
-	}
-
-	.form-group input,
-	.form-group textarea {
-		width: 100%;
-		padding: 0.875rem 1rem;
-		border: 2px solid var(--color-border);
-		border-radius: 8px;
-		font-size: 1rem;
-		font-family: inherit;
-		transition: border-color 0.3s ease;
-		background-color: var(--color-bg);
-	}
-
-	.form-group input:focus,
-	.form-group textarea:focus {
-		outline: none;
-		border-color: var(--color-primary);
-	}
-
-	.form-group textarea {
-		resize: vertical;
-		min-height: 120px;
-	}
-
-	.btn-full {
-		width: 100%;
-		margin-top: 1rem;
-	}
-
-	@media (max-width: 968px) {
-		.contact-content {
-			grid-template-columns: 1fr;
-			gap: 3rem;
-		}
-
-		.contact-form {
-			padding: 2rem;
-		}
-	}
-
-	@media (max-width: 768px) {
-		.contact-form {
-			padding: 1.5rem;
-		}
 	}
 </style>

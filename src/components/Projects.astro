@@ -15,7 +15,7 @@ const projects = allProjects.sort((a: CollectionEntry<'projects'>, b: Collection
 
 <section class="projects section" id="proyectos">
 	<div class="container">
-		<h2>Proyectos que demuestran mi experiencia</h2>
+		<h2>Projects that demonstrate my experience</h2>
 
 		<div class="projects-grid">
 			{projects.map((project: CollectionEntry<'projects'>) => (
@@ -37,7 +37,7 @@ const projects = allProjects.sort((a: CollectionEntry<'projects'>, b: Collection
 						)}
 						<div class="project-links">
 							<a href={`/proyectos/${project.slug}`} class="btn btn-primary">
-								Ver detalles →
+								View details →
 							</a>
 						</div>
 					</div>
@@ -46,8 +46,8 @@ const projects = allProjects.sort((a: CollectionEntry<'projects'>, b: Collection
 		</div>
 
 		<div class="projects-cta">
-			<p>¿Quieres ver más detalles de mis proyectos?</p>
-			<a href="#contacto" class="btn btn-secondary">Contáctame para una demostración</a>
+			<p>Want to see more details of my projects?</p>
+			<a href="#contacto" class="btn btn-secondary">Contact me for a demonstration</a>
 		</div>
 	</div>
 </section>
