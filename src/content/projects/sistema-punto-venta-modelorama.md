@@ -1,7 +1,7 @@
 ---
 title: "Sistema Punto de Venta Modelorama"
 description: "Complete custom-built POS system for beer retail, including sales, inventory, receipt printing, and shrinkage control."
-image: "/projects/pos-modelorama.png"
+image: "/projects/compaBeto.jpeg"
 date: 2023-11-01
 tags: [".NET", "Windows Forms", "SQLite", "Desktop", "POS"]
 published: true

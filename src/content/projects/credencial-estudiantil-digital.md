@@ -1,7 +1,7 @@
 ---
 title: "Credencial Estudiantil Digital"
 description: "Full-stack platform for digital student credential management enabling urban transportation access through mobile app and scalable backend."
-image: "/projects/credencial-estudiantil.png"
+image: "/projects/creedencial_estudiantil.png"
 date: 2025-12-01
 tags: ["Flutter", "ASP.NET", "PostgreSQL", "TimescaleDB", "MediatR", "Android", "iOS"]
 published: true
